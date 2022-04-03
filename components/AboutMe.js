@@ -1,0 +1,193 @@
+import styled from "styled-components";
+
+const AnimateSpan = styled.span`
+    position: absolute;
+    font-size: 5em;
+    white-space: nowrap;
+    font-family: 'Nanum Pen Script', cursive;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 10px;
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 15px rgba(0.0.0.0.25);
+    transform: translateX(-50%) rotateX(calc(36deg * ${props => props.number})) translateZ(100px);
+
+    i {
+        font-style: initial;
+    }
+`
+const AnimateTitle = styled.button`
+    font-size: 50px;
+    display: flex;
+    color: #f4f4f4;
+    background-color: #1D1D1D;
+    border: none;
+
+    :hover {
+        color: ${props => props.color};
+        animation: jelly 0.8s;
+    }
+
+    @keyframes jelly{
+        25%{
+            transform: scale(0.8, 1.3);
+        }
+        50%{
+            transform: scale(1.3, 0.8);
+        }
+        75%{
+            transform: scale(0.7, 1.2);
+        }
+        100%{
+            transform: scale(1.0, 1.0);
+        }
+    }
+`
+
+const Emphasis_txt = styled.span`
+    color: ${props => props.color};
+    font-weight: 500;
+`
+
+export default function AboutMe () {
+
+    return (
+        <div className="main_wrapper">
+            <div className="text_wrapper">
+                <div className="wrapper">
+                    <span className="deco_txt1">&#60;h2&#62;</span>
+                    <AnimateTitle className="title" color="#76e1c4">언</AnimateTitle>
+                    <AnimateTitle className="title" color="#6adcd3">제</AnimateTitle>
+                    <AnimateTitle className="title" color="#3fd1de">나</AnimateTitle> 
+                    <AnimateTitle className="title">&nbsp; </AnimateTitle>                
+                    <AnimateTitle className="title" color="#37b6e0">긍</AnimateTitle>
+                    <AnimateTitle className="title" color="#449bd8">정</AnimateTitle>
+                    <AnimateTitle className="title" color="#4278d9">적</AnimateTitle>
+                    <AnimateTitle className="title" color="#4c56d8">인</AnimateTitle> 
+                    <AnimateTitle className="title">&nbsp;   </AnimateTitle>                
+                    <AnimateTitle className="title" color="#513dcd">김</AnimateTitle>
+                    <AnimateTitle className="title" color="#923ee1">태</AnimateTitle>
+                    <AnimateTitle className="title" color="#d356e5">일</AnimateTitle>
+                    <AnimateTitle className="title" color="#f660b5">입</AnimateTitle>
+                    <AnimateTitle className="title" color="#f06387">니</AnimateTitle>
+                    <AnimateTitle className="title" color="#f27e7e">다</AnimateTitle>
+                    <AnimateTitle className="title" color="#f27e7e">!</AnimateTitle>
+                    <span className="deco_txt2">&#60;&#47;h2&#62;</span>
+                </div>
+
+                <span className="deco_txt2">&#60;p&#62;</span>
+                <p className="introduce">
+                &nbsp;안녕하세요. 웹 프론트 엔드 2년차 개발자 <Emphasis_txt color="#F7F7F7">김태일</Emphasis_txt>입니다.<br></br><br></br>
+                    
+                {/* &nbsp;새로운 것을 만드는 것을 좋아해 하드웨어와 소프트웨어를 함께 공부할 수 있는<br></br>
+                    정보통신공학부에 입학을 했다가, 소프트웨어의 재미를 알게 되어 컴공과로 전과를 하면서<br></br> 
+                    저의 개발 인생이 시작되었습니다. 개발을 처음 배울 때는 무조건 백엔드 개발자가 돼야지!라고<br></br>
+                    생각했는데, 처음 실무를 하게 되었던 회사에서 백엔드와 프런트엔드를 전부 경험하게 되었고,<br></br>
+                    그때 프런트엔드의 매력에 푹 빠져서 아직도 헤어 나오지 못하고 있습니다.<br></br><br></br> */}
+
+                &nbsp;매개발시 사용자의 <Emphasis_txt color="#F7F7F7">편의</Emphasis_txt>와<Emphasis_txt color="#F7F7F7"> 가독성</Emphasis_txt>을 제일 중요시하며, 사용자 디바이스의 <Emphasis_txt color="#F7F7F7">최적화</Emphasis_txt>를 항상 고민합니다. 
+                <br></br>
+                &nbsp;팀개발시 팀원과의 <Emphasis_txt color="#F7F7F7">소통</Emphasis_txt>을 제일 우선시하며, 개발자뿐만 아니라 기획, QA 등 비개발 업무 담당자분들과의<br></br>
+                소통도 중요시합니다. 항상 화목한 분위기를 이끌어내어 좋은 성과를 이루었습니다.
+                <br></br><br></br>
+                &nbsp;프론트 엔드 최신 트렌드를 공부하는 것도 좋아하지만, 기존 언어의 기본을 깊이 공부하고 이해하려고 노력합니다.
+                <br></br> 아무리 어려운 문제가 있어도 항상 <Emphasis_txt color="#F7F7F7">긍정적</Emphasis_txt>으로 생각하고, <Emphasis_txt color="#F7F7F7">적극적</Emphasis_txt>으로 해결합니다.
+
+                </p>
+                <span className="deco_txt2">&#60;&#47;p&#62;</span>
+                <a href="/resume.pdf" download="resume.pdf">download</a>
+            </div>
+            <div className="animate_wrapper">
+                <div className="box">
+                    <AnimateSpan number={1}><i>JavaScript</i></AnimateSpan>
+                    <AnimateSpan number={2}><i>React</i></AnimateSpan>
+                    <AnimateSpan number={3}><i>NextJs</i></AnimateSpan>
+                    <AnimateSpan number={4}><i>NODEJS</i></AnimateSpan>
+                    <AnimateSpan number={5}><i>HTML</i></AnimateSpan>
+                    <AnimateSpan number={6}><i>CSS</i></AnimateSpan>
+                    <AnimateSpan number={7}><i>C#</i></AnimateSpan>
+                    <AnimateSpan number={8}><i>MYSQL</i></AnimateSpan>
+                    <AnimateSpan number={9}><i>ORACLE</i></AnimateSpan>
+                    <AnimateSpan number={10}><i>JAVA</i></AnimateSpan>
+                </div>
+            </div>
+            <style jsx>{`
+                .main_wrapper{
+                    display: flex;
+                }
+
+                .text_wrapper{
+                    width: 70%;
+                }
+
+                .text_wrapper a{
+                    display: flex;
+                    width: 110px;
+                    margin-top: 20px;
+                    margin-left: 40px;
+                    color: #f4f4f4; 
+                    text-decoration-line : none;
+                    font-size: 30px;
+                    border: solid 1px #f4f4f4;
+                    border-radius: 10px;
+                    padding: 10px;
+                }
+
+                .text_wrapper a:hover{
+                    background-color: #2F3F4F;
+                }
+
+                .animate_wrapper{
+                    width: 30%;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-heigth: 100vh;
+                    overflow: hidden;
+                }
+
+                .box{
+                    transform-style: preserve-3d;
+                    animation: circle 25s linear infinite;
+                }
+
+                @keyframes circle {
+                    0%{
+                        transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+                    }
+                    100%{
+                        transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+                    }
+                }
+
+                .wrapper{
+                    display: flex;
+                    margin-top: 10%;
+                    margin-bottom: 50px;
+                    margin-left: 40px;
+                }
+
+                .deco_txt1{
+                    font-size: 20px;
+                    color: #2F3F4F;
+                    display: flex;
+                    margin-right: 40px;
+                }
+
+                .deco_txt2{
+                    font-size: 20px;
+                    color: #2F3F4F;
+                    display: flex;
+                    margin-left: 40px;
+                }
+
+                .introduce{
+                    color: #999999;
+                    font-size: 30px;
+                    margin-left: 40px;
+                }
+            `}</style>
+        </div>
+    )
+}

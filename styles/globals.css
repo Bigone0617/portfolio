@@ -1,16 +1,141 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Nanum+Gothic:wght@400;700&family=Nanum+Pen+Script&display=swap');
 
 * {
+  font-family: "Cute Font", cursive;
+}
+
+*,
+::before,
+::after {
   box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  line-height: 1.5;
+  font-family: tahoma;
+  font-size: 71.5%;
+  color: #f4f4f4;
+  background-color: #1d1d1d;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scrolls {
+  /* scroll-behavior: smooth; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.25em;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  color: #f4f4f4;
+}
+
+.scrolls .center {
+  font-size: 0.825rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  min-height: 59px;
+  font-size: 1rem;
+  background-image: linear-gradient(
+    180deg,
+    #1d1d1d,
+    rgba(29, 30, 34, 0.1),
+    transparent
+  );
+  mix-blend-mode: luminosity;
+}
+
+.slide-navigation {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0px;
+}
+
+.slide-navigation button:disabled {
+  background-color: #1d1d1d;
+  border: 1px solid white;
+}
+
+.slide-navigation button:nth-child(1) {
+  display: none;
+}
+
+.slide-navigation button:nth-last-child(1) {
+  display: none;
+}
+
+.slide-navigation button {
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #1d1d1d;
+  width: 5px;
+  height: 15px;
+  margin: 0 5px;
+  font-size: 0px;
+  cursor: pointer;
+}
+
+.slide-navigation button:hover::before {
+  position: absolute;
+  top: -10px;
+  content: "";
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #f4f4f4;
+}
+
+.slide-navigation button:hover::after {
+  position: absolute;
+  color: #1d1d1d;
+  font-size: 20px;
+  top: -38px;
+  font-weight: 500;
+  background: #f4f4f4;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.slide-navigation button:nth-child(2):hover::after {
+  content: "Home";
+}
+
+.slide-navigation button:nth-child(3):hover::after {
+  content: "AboutMe";
+}
+
+.slide-navigation button:nth-child(4):hover::after {
+  content: "Skills";
+}
+
+.slide-navigation button:nth-child(5):hover::after {
+  content: "Projects";
+}
+
+.slide-navigation button:nth-child(6):hover::after {
+  content: "Contact Me";
 }

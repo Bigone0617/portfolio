@@ -1,7 +1,20 @@
 import '../styles/globals.css'
+import Head from 'next/head'
+
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <meta property="og:title" content="프론트엔드 개발자 - 김태일 포트폴리오 웹사이트" key="title" />
+        <meta property="og:description" content='프론트엔드 개발자 김태일의 포트폴리오 사이트입니다.' key="description" />
+        <meta name="viewport" content="target-densitydpi=device-dpi, user-scalable=0, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+      </Head>
+      <span>
+        <Component {...pageProps} />
+      </span>
+    </>
+  )
 }
 
 export default MyApp
