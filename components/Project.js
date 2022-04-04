@@ -272,13 +272,13 @@ export default function Projects(){
                             color="#f4f4f4"
                             height="30px"
                             width="30px"
-                            onClick={() => window.open('', '_blank')}
+                            onClick={() => window.open('https://github.com/Bigone0617/portfolio', '_blank')}
                         />
                         <PlayOutline
                             color="#f4f4f4"
                             height="30px"
                             width="30px"
-                            onClick={() => window.open('', '_blank')}
+                            onClick={() => window.open('https://taeilkim.vercel.app', '_blank')}
                         />
                     </div>
                 </StyleServiceBox>
@@ -337,12 +337,12 @@ export default function Projects(){
 
                 .view_detail{
                     transform : scale(0);
-                    top: -48%;
+                    top: -60%;
                     left: 12%;
                     z-index: 0;
                     position: relative;
                     width: 80%;
-                    height: 630px;
+                    height: 700px;
                     justify-content: center;
                     align-items: center;
                     background: #1D1D1A;
