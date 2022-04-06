@@ -69,7 +69,7 @@ export default function Contact(){
                 }
                 .footer_txt{
                     height: 50%;
-                    font-size: 200px;
+                    font-size: 20px;
                 }
 
                 .footer-wrapper{

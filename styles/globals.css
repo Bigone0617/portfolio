@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Nanum+Gothic:wght@400;700&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Nanum+Gothic+Coding&family=Nanum+Gothic:wght@400;700&family=Nanum+Pen+Script&display=swap');
 
 * {
-  font-family: "Cute Font", cursive;
+  font-family: 'Nanum Gothic Coding', monospace;
 }
 
 *,
@@ -113,7 +113,7 @@ body::-webkit-scrollbar {
   position: absolute;
   color: #1d1d1d;
   font-size: 20px;
-  top: -38px;
+  top: -35px;
   font-weight: 500;
   background: #f4f4f4;
   padding: 3px 8px;

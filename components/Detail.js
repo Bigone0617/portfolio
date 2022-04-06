@@ -31,7 +31,7 @@ export default function Detail({project_name}){
         amond: {
             name : "아몬드톡",
             exp:"웹기반 실시간 채팅 어플리케이션입니다.",
-            skill_exp:"프론트 엔드는 React 기반으로 제작하였고, 백엔드는 nodejs로 서버를 제작했습니다. 그리고 프론트 엔드는 netlify를 통해 배포하고 백엔드는 Heroku를 통해서 배포했습니다.",
+            skill_exp:"프론트 엔드는 React 기반으로 제작하였고, 백엔드는 nodejs로 REST API 형태의 서버를 제작했습니다. 그리고 프론트 엔드는 netlify를 통해 배포하고 백엔드는 Heroku를 통해서 배포했습니다.",
             pic: ["/img/amond02.jpg","/img/amond03.jpg","/img/amond04.jpg","/img/amond05.jpg","/img/amond06.jpg","/img/amond08.jpg","/img/amond09.jpg","/img/amond10.jpg"],
             skills: "React, nodejs, Heroku, netlify"
         },
@@ -66,6 +66,9 @@ export default function Detail({project_name}){
             <div className="project_skill_exp">
                 <p><b>느낀점 및 부가 설명 : </b>{projcets[prj_name].skill_exp}</p>
             </div>
+            <div className="project_skills">
+                <b>SKILLS: </b>{projcets[prj_name].skills}
+            </div>
             <div className="project_pic">
                 <section>
                     <img src={projcets[prj_name].pic?.[0]} id="slider"></img>
@@ -80,27 +83,26 @@ export default function Detail({project_name}){
                     </ul>
                 </section>
             </div>
-            <div className="project_skills">
-                SKILLS: {projcets[prj_name].skills}
-            </div>
             <style jsx>{`
                 .project_name{
-                    font-size: 80px;
+                    font-size: 60px;
                 }
 
                 .project_exp{
-                    font-size: 30px;
+                    font-size: 25px;
                     margin-bottom: 10px;
+                    width: 70%
                 }
 
                 .project_skill_exp{
-                    font-size: 30px;
+                    font-size: 25px;
                     margin-bottom: 10px;
                     width: 70%;
                     white-space: normal;
                 }
 
                 .project_pic{
+                    margin-top: 20px;
                 }
 
                 .project_pic section{
@@ -149,8 +151,7 @@ export default function Detail({project_name}){
                 }
 
                 .project_skills{
-                    margin-top: 180px;
-                    font-size: 40px;
+                    font-size: 30px;
                 }
             `}</style>
         </div>

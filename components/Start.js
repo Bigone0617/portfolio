@@ -129,7 +129,7 @@ export default function Start(){
                     transform : scale(0);
                     width: 200px;
                     height: 60px;
-                    font-size: 50px;
+                    font-size: 40px;
                 }
 
                 .restart:hover{
@@ -138,10 +138,11 @@ export default function Start(){
 
                 .scroll{
                     transform : scale(0);
-                    width: 50px;
-                    font-size: 30px;
+                    width: 150px;
+                    font-size: 40px;
                     position: absolute;
                     top: 85%;
+                    text-align:center
                 }
 
 

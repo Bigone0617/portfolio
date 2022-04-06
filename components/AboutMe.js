@@ -127,10 +127,11 @@ export default function AboutMe () {
                     margin-left: 40px;
                     color: #f4f4f4; 
                     text-decoration-line : none;
-                    font-size: 30px;
+                    font-size: 20px;
                     border: solid 1px #f4f4f4;
                     border-radius: 10px;
                     padding: 10px;
+                    text-align:center
                 }
 
                 .text_wrapper a:hover{
@@ -138,6 +139,7 @@ export default function AboutMe () {
                 }
 
                 .animate_wrapper{
+                    font-family: 'Cute Font', cursive;
                     width: 30%;
                     box-sizing: border-box;
                     display: flex;
@@ -184,7 +186,7 @@ export default function AboutMe () {
 
                 .introduce{
                     color: #999999;
-                    font-size: 30px;
+                    font-size: 25px;
                     margin-left: 40px;
                 }
             `}</style>
