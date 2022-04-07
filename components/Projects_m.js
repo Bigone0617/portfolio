@@ -1,49 +1,52 @@
-import { Swiper, SwiperSlide } from "swiper/react"; // basic
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
+import "./project_m.module.css";
+import SwiperCore, {EffectCoverflow, Pagination, Navigation}from 'swiper/core';
+
+SwiperCore.use(EffectCoverflow, Pagination, Navigation)
 
 export default function Projects_m(){
-    function slide_style () {
-        if(typeof window === 'object'){
-            const swiper_wrapper = document.getElementsByClassName('swiper-wrapper')[0];
-            swiper_wrapper.childNodes.forEach = Array.prototype.forEach;
-
-            swiper_wrapper.childNodes.forEach((slide) => {
-                slide.style.backgroundColor = "blue";
-                slide.style.backgroundPosition = "center";
-                slide.style.backgroundSize = "cover";
-                slide.style.width = "300px";
-                slide.style.height = "300px";
-            })
-        }
-    }
-
-    setInterval(slide_style, 5000);
-
     return (
         <div className="main_wrapper">
-            <section>
-                <Swiper
-                    spaceBetween={50}
-                    slidesPerView={3}
-                    scrollbar={{ draggable: true }}
-                    breakpoints={{
-                        768: {
-                        slidesPerView: 7,
-                        },
-                    }}
-                    >
-                        <SwiperSlide>Slide 1</SwiperSlide>
-                        <SwiperSlide>Slide 2</SwiperSlide>
-                        <SwiperSlide>Slide 3</SwiperSlide>
-                        <SwiperSlide>Slide 4</SwiperSlide>
-                        <SwiperSlide>Slide 5</SwiperSlide>
-                        <SwiperSlide>Slide 6</SwiperSlide>
-                        <SwiperSlide>Slide 7</SwiperSlide>
-                </Swiper>
-            </section>
-            
+            <Swiper
+                navigation={true}
+                effect={"coverflow"}
+                centeredSlides={true}
+                slidesPerView={1}
+                loop={true}
+                coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: true
+                }}
+                pagination={{
+                    clickable: true
+                }}
+                className="project_swiper"
+            >
+                <SwiperSlide>
+                    <img src="/img/cafe02.jpg"></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/img/site02.jpg"></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/img/water02.jpg"></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/img/amond02.jpg"></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/img/ubit02.jpg"></img>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/img/port02.jpg"></img>
+                </SwiperSlide>
+            </Swiper>
             <style jsx>{`
-                section{
+                main_wrapper{
                     position: relative;
                     width: 100%;
                     min-height: 100vh;
