@@ -36,6 +36,14 @@ const StyleBar = styled.span`
         padding: 1px 8px;
         border-radius: 3px;
     }
+
+    @media screen and (max-width: 768px) {
+        &&:after{
+            top: -32px;
+            font-size: 15px;
+            padding: 1px 5px;
+        }
+    }
 `
 
 export default function SkillBar({data}){
@@ -82,7 +90,16 @@ export default function SkillBar({data}){
                     100%{
                         transform: scaleX(1);
                     }
-                } 
+                }
+                
+                @media screen and (max-width: 768px) {
+                    .info span{
+                        font-size: 15px;
+                    }
+                    .progress-line{
+                        height: 10px;
+                    }
+                }
             `}</style>
         </div>
     )

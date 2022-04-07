@@ -30,9 +30,28 @@ export default function Start(){
         dynamic_txts.style.animationPlayState = 'running';
     }
 
+    function media_size(){
+        const restart_svg = document.getElementsByClassName('restart')[0].childNodes[1].childNodes[0];
+        const scroll_svg = document.getElementsByClassName('scroll')[0].childNodes[1].childNodes[0];
+        if(window.innerWidth <= 768){
+            restart_svg.style.width = '20px';
+            restart_svg.style.height = '20px';
+
+            scroll_svg.style.width = '20px';
+            scroll_svg.style.height = '20px';
+        }else{
+            restart_svg.style.width = '40px';
+            restart_svg.style.height = '40px';
+
+            scroll_svg.style.width = '40px';
+            scroll_svg.style.height = '40px';
+        }
+    }
+
     // client side에서 렌더링 할때 실행하기 위해서
     if(typeof window === 'object'){
         animation_end();
+        media_size();
     }
 
 
@@ -209,6 +228,67 @@ export default function Start(){
                     }
                     100%{
                         transform: scale(2);
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    .dynamic-txts {
+                        position: absolute;
+                        height: 40px;
+                        line-height: 40px;
+                        overflow: hidden;
+                      }
+      
+                    .dynamic-txts li{
+                        list-style: none;
+                        font-size: 35px;
+                        position: relative;
+                        top:0;
+                        animation: slide 10s steps(5) forwards;
+                    }
+      
+                    @keyframes slide{
+                        100%{
+                            top: -200px;
+                        }
+                    }
+      
+                    .dynamic-txts li span{
+                        position: relative
+                    }
+                      
+                    .dynamic-txts li span::after{
+                        content:"";
+                        position:absolute;
+                        left:0;
+                        height: 100%;
+                        width: 100%;
+                        border-left: 2px solid #f4f4f4;
+                        background: #1D1D1D;
+                        animation: typing 2s steps(10) infinite;
+                    }
+      
+                    @keyframes typing{
+                        100%{
+                            left: 100%;
+                            margin: 0 -35px 0 35px;
+                        }
+                    }
+
+                    .restart{
+                        transform : scale(0);
+                        width: 100px;
+                        height: 30px;
+                        font-size: 20px;
+                    }
+
+                    .scroll{
+                        transform : scale(0);
+                        width: 70px;
+                        font-size: 20px;
+                        position: absolute;
+                        top: 85%;
+                        text-align:center
                     }
                 }
             `}</style>

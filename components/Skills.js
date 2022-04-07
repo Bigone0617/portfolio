@@ -1,6 +1,7 @@
 import SkillBar from "./SkillBar";
+import {useState} from "react";
 
-const skills = [
+let skills = [
     {
         name: 'JavaScript',
         percent: '80%',
@@ -70,10 +71,14 @@ const skills = [
 
 
 export default function Skills(){
+    const [device, setDevice] = useState('p');
 
     // skills 페이지가 보여지면 skillbar 애니메이션 실행 
     function event_start () {
         if(typeof window === 'object'){
+            if(window.innerWidth <= 768){
+                setDevice("m");
+            }
             this.wrapper = document.getElementsByClassName('skills-wrapper')[0];
             this.wrapper.addEventListener('mouseover', this.skills_event_start);
 
@@ -91,9 +96,20 @@ export default function Skills(){
     return (
         <div className="skills-wrapper">
             <div className="skills-bar">
-                {skills.map((skill, idx) => (
-                    <SkillBar key={idx} data={skill}/>
-                ))}
+                {
+                    device === 'm' ? (
+                        skills.map((skill, idx) => {
+                            if(idx <= 10){
+                                if(idx === 10) skill.name = 'MDBS';
+                                return (<SkillBar key={idx} data={skill}/>)
+                            }
+                        })
+                    ):(
+                        skills.map((skill, idx) => (
+                            <SkillBar key={idx} data={skill}/>
+                        ))
+                    )
+                }
             </div>
             <style jsx>{`
                 .skills-wrapper{
