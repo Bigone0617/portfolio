@@ -1,0 +1,58 @@
+.main_wrapper{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    
+}
+
+.project_swiper{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper_slide{
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: auto;
+}
+
+.swiper_slide .contents{
+    /* align-items: center;
+    justify-content: center;
+    background-color: blue; */
+}
+
+.swiper_slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project_name{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.project_exp{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.project_skill_exp{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.project_skills{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
