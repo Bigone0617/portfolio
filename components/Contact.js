@@ -31,28 +31,32 @@ export default function Contact(){
                                 <a href="https://open.kakao.com/o/saGPJU8d" target="_blank" rel="noopener noreferrer">
                                     <ChatbubbleOutline color='#f4f4f4'
                                         height="40px"
-                                        width="40px"/>
+                                        width="40px"
+                                    />
                                 </a>
                             </li>
                             <li>
                                 <a href="mailto:xodlfsha@naver.com">
                                     <MailOutline color='#f4f4f4'
                                         height="40px"
-                                        width="40px"/>
+                                        width="40px"
+                                    />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://daily-life-of-bigone.tistory.com/" target="_blank" rel="noopener noreferrer">
                                     <NewspaperOutline color='#f4f4f4'
                                         height="40px"
-                                        width="40px"/>
+                                        width="40px"
+                                    />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/taeilkim_/" target="_blank" rel="noopener noreferrer">
                                     <LogoInstagram color='#f4f4f4'
                                         height="40px"
-                                        width="40px"/>
+                                        width="40px"
+                                    />
                                 </a>
                             </li>
                         </ul>

@@ -1,3 +1,4 @@
+import { LogoGithub, PlayOutline } from 'react-ionicons'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import styles from "./Projects_m.module.css";
@@ -32,16 +33,30 @@ export default function Projects_m(){
                             <h2>카페 창업 정보 공유 사이트</h2>
                         </div>
                         <div className={styles.project_exp}>
-                            <p><b>프로젝트 설명 : </b>"카페 창업을 하고자 하는 사람들을 위해, 창업 절차 및 비용, 머신, 원두 등에 정보를 제공하는 사이트입니다."</p>
+                            <p><b>프로젝트 설명 : </b>카페 창업을 하고자 하는 사람들을 위해, 창업 절차 및 비용, 머신, 원두 등에 정보를 제공하는 사이트입니다.</p>
                         </div>
                         <div className= {styles.project_skill_exp}>
-                            <p><b>느낀점 및 부가 설명 : </b>"Bootstrap을 이용하여 템플릿 활용법을 익혔고, nodejs로 간단한 서버 구축하는 방법을 알게 되었습니다."</p>
+                            <p><b>느낀점 및 부가 설명 : </b>Bootstrap을 이용하여 템플릿 활용법을 익혔고, nodejs로 간단한 서버 구축하는 방법을 알게 되었습니다.</p>
                         </div>
                         <div className={styles.project_skills}>
-                            <b>SKILLS: </b>"HTML5, CSS3, JS, Bootstrap, nodejs"
+                            <p><b>SKILLS: </b>HTML5, CSS3, JS, Bootstrap, nodejs</p>
                         </div>
                         <div className={styles.project_img}>
                             <img src='/img/cafe01.jpg'></img>
+                        </div>
+                        <div className={styles.buttons}>
+                            <LogoGithub
+                                color="#f4f4f4"
+                                height="30px"
+                                width="30px"
+                                onClick={() => window.open('https://github.com/Bigone0617/amondTalk', '_blank')}
+                            />
+                            <PlayOutline
+                                color="#f4f4f4"
+                                height="30px"
+                                width="30px"
+                                onClick={() => window.open('https://amond-talk.netlify.app/', '_blank')}
+                            />
                         </div>
                     </div>
                     {/* <img src="/img/cafe02.jpg"></img> */}
