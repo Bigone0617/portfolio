@@ -12,14 +12,19 @@ import Contact from "../components/Contact";
 
 export default function Home() {
   const [device, setDevice] = useState('p');
+
+  // 모바일 or pc 체크
   function device_check (){
     if(typeof window == 'object'){
-      if(window.innerWidth <= 768){
+      if(window.innerWidth <= 768 && device === 'p'){
         setDevice('m');
+      }else if(window.innerWidth > 768 && device === 'm'){
+        setDevice('p');
       }
     }
   }
-  setInterval(device_check, 10000);
+
+  setInterval(device_check, 3000);
   
   return (
     <div>

@@ -208,6 +208,24 @@ export default function Contact(){
                         background-position-x:1000px;
                     }
                 }
+
+
+                @media screen and (max-width: 768px){
+                    .footer{
+                        padding: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .footer .social_icon{
+                        padding: 0;
+                    }
+
+                    .footer p {
+                        font-size: 12px;
+                    }
+                }
             `}</style>
         </div>
     )
