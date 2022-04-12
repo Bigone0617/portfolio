@@ -2,9 +2,9 @@ import { LogoGithub, PlayOutline } from 'react-ionicons'
 import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import styles from "./Projects_m.module.css";
-import SwiperCore, {EffectCoverflow, Navigation}from 'swiper/core';
+import SwiperCore, {EffectCoverflow, Navigation, Autoplay, Pagination} from 'swiper';
 
-SwiperCore.use(EffectCoverflow, Navigation)
+SwiperCore.use([EffectCoverflow, Navigation, Autoplay, Pagination])
 
 export default function Projects_m(){
     const projcets = [
@@ -61,11 +61,11 @@ export default function Projects_m(){
     return (
         <div className={styles.main_wrapper}>
             <Swiper
-                // navigation={true}
                 effect={"coverflow"}
                 centeredSlides={true}
                 slidesPerView={1}
                 loop={true}
+                mousewhee={false}
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 0,
@@ -73,6 +73,11 @@ export default function Projects_m(){
                     modifier: 1,
                     slideShadows: true
                 }}
+                autoplay={
+                    {
+                        delay: 5000,
+                    }
+                }
                 className={styles.project_swiper}
             >
                 {

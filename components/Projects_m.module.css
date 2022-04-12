@@ -17,9 +17,27 @@
     height: auto;
 }
 
+.swiper_slide::after{
+    content: "<--  슬라이드 -->";
+    color: #f4f4f4;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 999;
+    position: absolute;
+    left: 100px;
+    animation: showslide 2s linear ;
+}
+@keyframes showslide {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+
 .swiper_slide .contents{
     position: relative;
-    top: 50px;
     align-items: center;
     justify-content: center;
 }

@@ -5,7 +5,15 @@ export default function Contact(){
         <div className="main_wrapper">
             <div className='footer_txt'>
                 <p>
-                    
+                    &nbsp;항상 서버 측과 클라이언트 측에 무리 되지 않는 렌더링을 고민하고, 
+                    사용자가 편하게 사용 가능한 서비스를 만드는 개발자가 되도록 노력하고 있습니다.
+
+                    <br></br><br></br>
+                    &nbsp;현재 저는 저의 성장 가능성을 보고 함께 성장 해나갈 수 있는 회사를 찾고 있습니다.
+                    관심 있으신 분께서는 하단 링크를 통해 언제든지 연락 주세요!
+
+                    <br></br><br></br>
+                    &nbsp;사이트에 방문해 주셔서 감사합니다 :)
                 </p>
             </div>
             <div className='footer-wrapper'>
@@ -74,6 +82,11 @@ export default function Contact(){
                 .footer_txt{
                     height: 50%;
                     font-size: 20px;
+                }
+
+                .footer_txt p{
+                    margin-left: 30px;
+                    margin-top: 150px;
                 }
 
                 .footer-wrapper{
@@ -224,6 +237,16 @@ export default function Contact(){
 
                     .footer p {
                         font-size: 12px;
+                    }
+
+                    .footer_txt p {
+                        margin-top: 100px;
+                        font-size: 15px;
+                        margin-right: 30px;
+                    }
+
+                    .animation-wrapper{
+                        height: 200px;
                     }
                 }
             `}</style>
