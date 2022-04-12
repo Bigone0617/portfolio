@@ -85,6 +85,7 @@ export default function Contact(){
                 }
 
                 .footer_txt p{
+                    width: 820px;
                     margin-left: 30px;
                     margin-top: 150px;
                 }

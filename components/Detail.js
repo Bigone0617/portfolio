@@ -46,8 +46,8 @@ export default function Detail({project_name}){
             name : "포트폴리오 사이트",
             exp:"저를 소개하고, 제가 지금까지 만들었던 프로젝트를 설명하는 사이트입니다.",
             skill_exp:"Nextjs 기반으로 저를 소개하는 원페이지 스크롤 페이지를 제작했습니다. 배포는 vercel을 통해서 배포했습니다. CSS animation 관련 부분에 대해서 많은 공부가 되었습니다.",
-            pic: ["/img/port02.jpg","/img/port03.jpg","/img/port04.jpg","/img/port05.jpg"],
-            skills: "Next.js, vercel"
+            pic: ["/img/port02.JPG","/img/port03.JPG","/img/port04.JPG","/img/port05.JPG"],
+            skills: "Next.js, react-full-page.js, styled-components.js, swiper.js, vercel"
         },
     }
 
