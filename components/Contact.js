@@ -241,7 +241,9 @@ export default function Contact(){
                     }
 
                     .footer_txt p {
-                        margin-top: 100px;
+                        width: 300px;
+                        white-space: normal;
+                        margin-top: 70px;
                         font-size: 15px;
                         margin-right: 30px;
                     }
