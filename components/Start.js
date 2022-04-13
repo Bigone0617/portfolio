@@ -113,7 +113,7 @@ export default function Start(){
                     font-size: 85px;
                     position: relative;
                     top:0;
-                    animation: slide 10s steps(5) forwards;
+                    animation: slide 7.5s steps(5) forwards;
                 }
   
                 @keyframes slide{
@@ -134,13 +134,13 @@ export default function Start(){
                     width: 100%;
                     border-left: 2px solid #f4f4f4;
                     background: #1D1D1D;
-                    animation: typing 2s steps(10) infinite;
+                    animation: typing 1.5s steps(12) infinite;
                 }
   
                 @keyframes typing{
                     100%{
                         left: 100%;
-                        margin: 0 -35px 0 35px;
+                        margin: 0 -40px 0 40px;
                     }
                 }
 

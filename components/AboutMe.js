@@ -143,6 +143,19 @@ export default function AboutMe () {
                     background-color: #2F3F4F;
                 }
 
+                .text_wrapper a:hover::after{
+                    content: "이력서 다운로드";
+                    color: #f4f4f4;
+                    position: absolute;
+                    right: 0;
+                    top: -37px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    background: #f4f4f4;
+                    padding: 1px 8px;
+                    border-radius: 3px;
+                }
+
                 .animate_wrapper{
                     font-family: 'Cute Font', cursive;
                     width: 30%;
