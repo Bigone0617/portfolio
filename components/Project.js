@@ -96,12 +96,16 @@ export default function Projects(){
         if(toggle == 'detail'){
             container.style.transform = 'scale(0)';
             container.style.transition = '0.5s';
+            container.style.display = 'none';
+            view_detail.style.display = 'block';
             view_detail.style.transform = 'scale(1)';
             view_detail.style.transition = '0.5s';
     
         }else{
+            container.style.display = 'flex';
             container.style.transform = 'scale(1)';
             view_detail.style.transform = 'scale(0)';
+            view_detail.style.display = 'none';
         }
     }
 
@@ -293,15 +297,15 @@ export default function Projects(){
             </div>
             <style jsx>{`
                 .project-wrapper{
+                    display: flex;
+                    padding: 0;
                     justify-content: center;
                     align-items: center;
-                    min-heght: 100vh;
-                    height: 100%;
+                    min-height: 100vh;
+                    width: 100%;
                 }
 
                 .container{
-                    position: relative;
-                    top: 15%;
                     width: 2000px;
                     display: flex;
                     justify-content: center;
@@ -309,6 +313,8 @@ export default function Projects(){
                     gap: 30px;
                     flex-wrap: wrap;
                     z-index:1;
+                    margin: 0;
+                    padding: 0;
                 }
 
                 .content{
@@ -337,15 +343,14 @@ export default function Projects(){
 
                 .view_detail{
                     transform : scale(0);
-                    top: -60%;
-                    left: 12%;
                     z-index: 0;
-                    position: relative;
-                    width: 80%;
-                    height: 700px;
+                    width: 1100px;
+                    height: 1100px;
                     justify-content: center;
                     align-items: center;
                     background: #1D1D1A;
+                    display: none;
+                    overflow: hidden;
                 }
 
                 .view_detail .button_wrapper button{
