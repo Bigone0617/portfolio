@@ -100,7 +100,7 @@ export default function AboutMe () {
                 <br></br> 아무리 어려운 문제가 있어도 항상 <Emphasis_txt color="#F7F7F7">긍정적</Emphasis_txt>으로 생각하고, <Emphasis_txt color="#F7F7F7">적극적</Emphasis_txt>으로 해결합니다.
                 </p>
                 <span className="deco_txt2">&#60;&#47;p&#62;</span>
-                <a href="/resume_new.pdf" download="resume_new.pdf">download</a>
+                <a href="/resume_taeil.pdf" download="resume_taeil.pdf">download</a>
             </div>
             <div className="animate_wrapper">
                 <div className="box">
